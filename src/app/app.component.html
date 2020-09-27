@@ -1,0 +1,17 @@
+<h1>Przykład template driven form:</h1>
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <input type="text" [(ngModel)]="user.firstName" name="firstname" class="form-input" required />
+  </div>
+  <div>
+    <input type="password" [(ngModel)]="user.password" name="password" minlength="4" class="form-input" required />
+  </div>
+  <div>
+    <button type="submit" [disabled]="!f.valid">Zatwierdź</button>
+  </div>
+
+</form>
+
+<ul>
+  <li *ngFor="let post of posts">{{ post.id }} -- {{ post.title }}</li>
+</ul>

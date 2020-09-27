@@ -1,0 +1,8 @@
+.form-input {
+    background: #6666ff;
+
+    &.ng-invalid.ng-touched {
+        background: #ff6666;
+    }
+
+}
